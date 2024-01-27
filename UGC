@@ -1,0 +1,61 @@
+GameName = "BakuganBrawlSim"
+
+tab1name = "main"
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local GameName = Library:NewWindow(GameName)
+
+local Tab1 = GameName:NewSection(tab1name)
+
+Tab1:CreateButton("INF Baku XP", function(value)
+local xp = true
+while true do
+local args = {
+    [1] = "TowerDamageDealt",
+    [2] = {
+        [1] = "b0fc6c3d-4ac1-450b-9163-b37129e15fb5",
+        [2] = 9999999999999999999999999999999999999999999999999999999999.8,
+        [3] = {
+            ["PHOENIX-6yTKifz7"] = 644221520321.6,
+            ["PHOENIX-vLXyZX86"] = 644221520321.6,
+            ["PHOENIX-zuQdpSvG"] = 644221520321.6
+        },
+        [4] = 868039915556,
+        [5] = {
+            [1] = {
+                [1] = "PHOENIX-zuQdpSvG",
+                [2] = 11,
+                [3] = 43067140081854.75,
+                [4] = "PROP",
+                [5] = 1,
+                [6] = 0
+            },
+            [2] = {
+                [1] = "PHOENIX-vLXyZX86",
+                [2] = 11,
+                [3] = 43067140081854.75,
+                [4] = "PROP",
+                [5] = 1,
+                [6] = 0
+            },
+            [3] = {
+                [1] = "PHOENIX-6yTKifz7",
+                [2] = 11,
+                [3] = 43067140081854.75,
+                [4] = "PROP",
+                [5] = 1,
+                [6] = 0
+            }
+        },
+        [6] = "MOB_W5_T4_MEGA",
+        [7] = Vector3.new(3923.9765625, 2857.301025390625, 1350.7762451171875)
+    }
+}
+
+game:GetService("ReplicatedStorage").F.RF:InvokeServer(unpack(args))
+wait()
+end
+ end)
+
+local Tab2 = GameName:NewSection("Cocojale")
