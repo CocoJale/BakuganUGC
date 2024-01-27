@@ -9,8 +9,7 @@ local GameName = Library:NewWindow(GameName)
 local Tab1 = GameName:NewSection(tab1name)
 
 Tab1:CreateButton("INF Baku XP", function(value)
-local xp = true
-while true do
+for i = 1, 500 do
 local args = {
     [1] = "TowerDamageDealt",
     [2] = {
@@ -54,7 +53,6 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").F.RF:InvokeServer(unpack(args))
-wait()
 end
  end)
 
